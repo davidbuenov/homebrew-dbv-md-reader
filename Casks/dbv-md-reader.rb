@@ -1,6 +1,6 @@
 cask "dbv-md-reader" do
-  version "0.16.0"
-  sha256 "4b22a1587f398a8a064f098332e1d8ef8c00e453ab7e979a7be6f3dcd3d5463c"
+  version "0.17.0"
+  sha256 "cc73544d29b0e4b5d26e546df64089cc58f906d76870d95effe5614cd53dd79c"
 
   url "https://github.com/davidbuenov/dbv-md-reader/releases/download/v#{version}/DBV.Markdown.Reader_#{version}_universal.dmg"
   name "DBV Markdown Reader"
