@@ -16,6 +16,13 @@ cask "dbv-md-reader" do
 
   app "DBV Markdown Reader.app"
 
+  # Build sin firmar ni notarizar por Apple: sin esto Gatekeeper bloquea la app
+  # ("Apple could not verify...") al abrirla tras instalarla con brew.
+  postflight do
+    system_command "/usr/bin/xattr",
+                   args: ["-dr", "com.apple.quarantine", "#{appdir}/DBV Markdown Reader.app"]
+  end
+
   zap trash: [
     "~/Library/Application Support/com.davidbuenov.dbv-md-reader",
     "~/Library/Saved Application State/com.davidbuenov.dbv-md-reader.savedState",
